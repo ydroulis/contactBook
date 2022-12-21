@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 
+export const FormContainer = styled.div`
+    .form{
+        position: relative;
+    }
+`
+
 export const FieldContainer = styled.div`
     margin-top: 20px;
     display: flex;
@@ -41,8 +47,8 @@ export const FieldContainer = styled.div`
 
 export const ButtonSubimit = styled.button`
     position: absolute;
-    right: 20px !important;
-    bottom: -70px !important;
+    right: 0px !important;
+    bottom: 0px !important;
     border-radius: 10px;
     border: none;
     color: #353839;
@@ -51,8 +57,7 @@ export const ButtonSubimit = styled.button`
     height: 30px;
 
     ${media.greaterThan("medium")`
-        right: 110px !important;
-        bottom: -320px !important;
+        right: 70px !important;
         width: 110px;
         height: 30px;
     `}
@@ -94,5 +99,8 @@ export const RemoveField = styled.div`
 
     ${media.greaterThan("medium")`
         margin-left: 70px;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
     `}
 `

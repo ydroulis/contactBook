@@ -114,64 +114,66 @@ function ContactForm({ setClose, type }: IForm) {
                 } = props
 
                 return (
-                    <Form>
-                        <S.FieldContainer>
-                            <label htmlFor='firstName'>Primeiro Nome</label>
-                            <Field id='firstName' name="firstName" type="text" placeholder="Digite seu nome" onChange={handleChange} value={values.firstName} />
-                            {touched.firstName && <div className='errors'>{errors.firstName}</div>}
-                        </S.FieldContainer>
+                    <S.FormContainer>
+                        <Form className='form'>
+                            <S.FieldContainer>
+                                <label htmlFor='firstName'>Primeiro Nome</label>
+                                <Field id='firstName' name="firstName" type="text" placeholder="Digite seu nome" onChange={handleChange} value={values.firstName} />
+                                {touched.firstName && <div className='errors'>{errors.firstName}</div>}
+                            </S.FieldContainer>
 
-                        <S.FieldContainer>
-                            <label htmlFor='secondName'>Segundo Nome</label>
-                            <Field id='secondName' name="secondName" type="text" placeholder="Digite seu sobrnome" onChange={handleChange} value={values.secondName} />
-                            {touched.secondName && <div className='errors'>{errors.secondName}</div>}
-                        </S.FieldContainer>
+                            <S.FieldContainer>
+                                <label htmlFor='secondName'>Segundo Nome</label>
+                                <Field id='secondName' name="secondName" type="text" placeholder="Digite seu sobrnome" onChange={handleChange} value={values.secondName} />
+                                {touched.secondName && <div className='errors'>{errors.secondName}</div>}
+                            </S.FieldContainer>
 
-                        <S.FieldContainer>
-                            <label htmlFor='phone'>Telefone</label>
-                            <Field id='phone' name="phone" type="tel" placeholder="Digite seu telefone" onChange={handleChange} value={values.phone} />
-                            {touched.phone && <div className='errors'>{errors.phone}</div>}
-                        </S.FieldContainer>
+                            <S.FieldContainer>
+                                <label htmlFor='phone'>Telefone</label>
+                                <Field id='phone' name="phone" type="tel" placeholder="Digite seu telefone" onChange={handleChange} value={values.phone} />
+                                {touched.phone && <div className='errors'>{errors.phone}</div>}
+                            </S.FieldContainer>
 
-                        {addedPhoneFields && <S.FieldContainer>
-                            <label htmlFor='phone2'>Telefone 2</label>
-                            <Field id='phone2' name="phone2" type="tel" placeholder="Digite seu telefone" onChange={handleChange} value={values.phone2} />
-                            {touched.phone2 && <div className='errors'>{errors.phone2}</div>}
-                        </S.FieldContainer>}
+                            {addedPhoneFields && <S.FieldContainer>
+                                <label htmlFor='phone2'>Telefone 2</label>
+                                <Field id='phone2' name="phone2" type="tel" placeholder="Digite seu telefone" onChange={handleChange} value={values.phone2} />
+                                {touched.phone2 && <div className='errors'>{errors.phone2}</div>}
+                            </S.FieldContainer>}
 
-                        {!addedPhoneFields && <S.InlcudeField onClick={addPhoneField}>+</S.InlcudeField>}
-                        {addedPhoneFields && <S.RemoveField onClick={removePhoneField}>-</S.RemoveField>}
+                            {!addedPhoneFields && <S.InlcudeField onClick={addPhoneField}>+</S.InlcudeField>}
+                            {addedPhoneFields && <S.RemoveField onClick={removePhoneField}>-</S.RemoveField>}
 
-                        <S.FieldContainer>
-                            <label htmlFor='email'>Email</label>
-                            <Field id='email' name="email" type="email" placeholder="Digite seu email" onChange={handleChange} value={values.email} />
-                            {touched.email && <div className='errors'>  {errors.email}</div>}
-                        </S.FieldContainer>
+                            <S.FieldContainer>
+                                <label htmlFor='email'>Email</label>
+                                <Field id='email' name="email" type="email" placeholder="Digite seu email" onChange={handleChange} value={values.email} />
+                                {touched.email && <div className='errors'>  {errors.email}</div>}
+                            </S.FieldContainer>
 
-                        <S.FieldContainer>
-                            <label htmlFor='cep'>Cep</label>
-                            <Field id='cep' name="cep" type="text" placeholder="Digite seu cep" onChange={handleChange} value={values.cep} />
-                            {touched.cep && <div className='errors'>{errors.cep}</div>}
-                            <label htmlFor='adress'>Endereço</label>
-                            <Field id='adress' name="adress" type="text" placeholder="Digite seu endereço" onChange={handleChange} value={values.adress} />
-                            {touched.adress && <div className='errors'>{errors.adress}</div>}
-                        </S.FieldContainer>
+                            <S.FieldContainer>
+                                <label htmlFor='cep'>Cep</label>
+                                <Field id='cep' name="cep" type="text" placeholder="Digite seu cep" onChange={handleChange} value={values.cep} />
+                                {touched.cep && <div className='errors'>{errors.cep}</div>}
+                                <label htmlFor='adress'>Endereço</label>
+                                <Field id='adress' name="adress" type="text" placeholder="Digite seu endereço" onChange={handleChange} value={values.adress} />
+                                {touched.adress && <div className='errors'>{errors.adress}</div>}
+                            </S.FieldContainer>
 
-                        {addedAdressFields && <S.FieldContainer>
-                            <label htmlFor='cep2'>Cep 2</label>
-                            <Field id='cep2' name="cep2" type="text" placeholder="Digite seu cep" onChange={handleChange} value={values.cep2} />
-                            {touched.cep2 && <div className='errors'>{errors.cep2}</div>}
-                            <label htmlFor='adress2'>Endereço 2</label>
-                            <Field id='adress2' name="adress2" type="text" placeholder="Digite seu endereço" onChange={handleChange} value={values.adress2} />
-                            {touched.adress2 && <div className='errors'>{errors.adress2}</div>}
-                        </S.FieldContainer>}
+                            {addedAdressFields && <S.FieldContainer>
+                                <label htmlFor='cep2'>Cep 2</label>
+                                <Field id='cep2' name="cep2" type="text" placeholder="Digite seu cep" onChange={handleChange} value={values.cep2} />
+                                {touched.cep2 && <div className='errors'>{errors.cep2}</div>}
+                                <label htmlFor='adress2'>Endereço 2</label>
+                                <Field id='adress2' name="adress2" type="text" placeholder="Digite seu endereço" onChange={handleChange} value={values.adress2} />
+                                {touched.adress2 && <div className='errors'>{errors.adress2}</div>}
+                            </S.FieldContainer>}
 
-                        {!addedAdressFields && <S.InlcudeField onClick={addAdressField}>+</S.InlcudeField>}
-                        {addedAdressFields && <S.RemoveField onClick={removeAdressField}>-</S.RemoveField>}
+                            {!addedAdressFields && <S.InlcudeField onClick={addAdressField}>+</S.InlcudeField>}
+                            {addedAdressFields && <S.RemoveField onClick={removeAdressField}>-</S.RemoveField>}
 
 
-                        {type === 'updateContact' ? (<S.ButtonSubimit type='submit'>Atualizar</S.ButtonSubimit>) : (<S.ButtonSubimit style={{ bottom: -20, right: 40 }} type='submit'>Salvar</S.ButtonSubimit>)}
-                    </Form>
+                            {type === 'updateContact' ? (<S.ButtonSubimit type='submit'>Atualizar</S.ButtonSubimit>) : (<S.ButtonSubimit style={{ bottom: -20, right: 40 }} type='submit'>Salvar</S.ButtonSubimit>)}
+                        </Form>
+                    </S.FormContainer>
                 )
             }
 
