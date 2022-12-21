@@ -28,10 +28,43 @@
   color: #61dafb;
 }
 
+.ReactModal__Content {
+  background: #161618 !important;
+  position: fixed !important;
+  width: 85%;
+  height: 88%;
+  top: 0px !important;
+  left: 9px !important;
+  border: none !important;
+
+}
+
+@media screen and (min-width: 390px) {
+  .ReactModal__Content {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 574px) {
+  .ReactModal__Content {
+    width: 91%;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .ReactModal__Content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 40px !important;
+
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
